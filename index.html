@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <base href="" />
+    <title>Playinnovation - Leaderboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app/css/main.css">
+    <!-- 1. Load libraries -->
+     <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+  <!-- 3. Display the application -->
+  <body>
+    <header class="main-head">
+      <a class="site-logo" href="">
+        <picture>
+          <source srcset="http://www.playinnovation.co.uk/assets/images/layouts/default/logo_ie.png" type="png">
+          <img src="http://www.playinnovation.co.uk/assets/images/layouts/default/logo_ie.png" alt="logo">
+        </picture>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="">Back to main site</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <leaderboard>Loading...</leaderboard>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+h1 {
+  font-size: 1.2em;
+  color: #999;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+.club-list {
+  margin: 0;
+  padding: 10px 40px 35px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  li {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    &:first-child {
+      line-height: 4rem;
+      font-size: 12px;
+      font-weight: bold;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-right: 2px solid;
+        border-top: 2px solid;
+        top: 43%;
+        right: -10px;
+        transform: rotate(45deg);
+      }
+    }
+    img {
+      width: 55px;
+      display:block;
+      transition: all .2s ease-in-out;
+      + span {
+        font-size: 10px;
+        position: absolute;
+        left: 0;
+      }
+      &:hover {
+        transform: scale(1.2);
+        + span {
+          transition: all 0.2s ease-in-out;
+          opacity: 0.5
+        }
+      }
+    }
+  }
+}
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
+}

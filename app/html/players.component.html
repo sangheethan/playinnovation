@@ -1,0 +1,40 @@
+<h2>Top Scorers</h2>
+<div class="players">
+	<div>
+		<ul>
+			<li>Player</li>
+			<li>Score</li>
+		</ul>
+	</div>
+	<div *ngFor="let player of players"
+		[class.selected] = "player === selectedPlayer"
+		(click)="onSelect(player)">
+		<ul>
+			<li>{{player.name}}</li>
+			<li>{{player.score}}</li>
+		</ul>
+	</div>
+</div>
+<div class="popup-overlay" *ngIf="selectedPlayer">
+	<dialog open id="player-info-dialog">
+		<div class="dialog_header">
+			<span class="dialog-logo"></span>
+			<span class="close-button" onclick="document.getElementById('player-info-dialog').close();"></span>
+		</div>
+		<div class="player-profile-pic">
+			<img src="http://www.playinnovation.co.uk/assets/images/logos/town-logos/street-snooker-town-logo.jpg" />
+		</div>
+		<div class="player-details">
+			<h3>{{selectedPlayer.name}}</h3>
+			<ul>
+				<li>{{selectedPlayer.club}} Town</li>
+				<li>{{selectedPlayer.age}} years old</li>
+				<li>Street Snooker player</li>				
+			</ul>
+			<div class="score">
+				<span>highscore</span>
+				{{selectedPlayer.score}}
+			</div>
+		</div>
+  	</dialog>
+</div>

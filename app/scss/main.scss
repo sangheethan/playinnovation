@@ -1,0 +1,146 @@
+// Variables
+$bp-l: 1220px;
+
+// Main Styles
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+}
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+ul {
+  list-style: none;
+}
+header {
+  &.main-head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+    padding: 15px 10px 15px 20px;
+    > a {
+      display: inline-block;
+      picture {
+        img {
+          height: 100%;
+          max-height: 54px;
+        }
+      }
+    }
+    > nav {
+      display: inline-block;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          display: inline-block;
+          a {
+            display: block;
+            padding: 20px 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white; 
+            position: relative;
+            &:before {
+
+            }
+            &:after {
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+leaderboard {
+  max-width: $bp-l;
+  margin: 0 auto;
+  display: block;
+  h1:nth-of-type(1) {
+    padding: 20px 0;
+    margin: 0;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.2em;
+  }
+}
+dialog {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  max-height: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: 1px solid #666;
+  z-index: 667;
+  overflow-y: auto;
+  min-width: 500px;
+  background-position: center;
+  background-blend-mode: difference;
+  .dialog_header {
+    display: flex;
+    background-color: #000;
+    padding: .3rem .3rem .3rem 1rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    .dialog-logo {
+      display: block;
+      background-image: url(http://www.playinnovation.co.uk/assets/images/layouts/default/logo_ie.png);
+      width: 135px;
+      height: 35px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+[class*='close-'] {
+  color: #fff;
+  font: 25px/100% arial, sans-serif;
+  position: relative;
+  text-decoration: none;
+  background-color: #00bddf;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  cursor: pointer;
+  &:after {
+    position:absolute;
+    content: '✖';
+    right: 7px;
+    top: 7px;
+  }
+  &:hover{
+    &:after {
+      transform: rotate(360deg);
+      transition: transform 0.8s ease-in-out;
+    }
+  }
+}

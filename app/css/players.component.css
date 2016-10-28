@@ -1,0 +1,100 @@
+.selected {
+  background-color: #CFD8DC !important;
+  color: white; }
+
+.players {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0; }
+  .players div {
+    border-bottom: 1px solid #ddd; }
+    .players div:first-of-type {
+      border: none;
+      background-color: #333; }
+      .players div:first-of-type ul li {
+        font-weight: bold;
+        padding: 10px 0;
+        border: none;
+        color: #fff; }
+    .players div ul li {
+      width: 20%;
+      display: inline-block; }
+      .players div ul li:first-child {
+        width: 50%; }
+    .players div:not(:first-of-type) ul {
+      margin: 0;
+      padding: 0; }
+      .players div:not(:first-of-type) ul li:first-child {
+        padding: 15px 0 15px 40px; }
+      .players div:not(:first-of-type) ul:hover {
+        background-color: white; }
+  .players li {
+    cursor: pointer;
+    position: relative; }
+    .players li:hover:not(.players div:first-of-typ ul li) {
+      color: #607D8B;
+      background-color: #DDD; }
+    .players li.selected {
+      background-color: #BBD8DC !important;
+      color: white; }
+  .players .text {
+    position: relative;
+    top: -3px; }
+  .players .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px; }
+
+.player-details {
+  display: block;
+  margin: 0 auto;
+  padding: 40px 10px 40px 160px; }
+  .player-details > h3 {
+    font-weight: bold;
+    font-size: medium;
+    margin: 0; }
+  .player-details > ul {
+    margin: 0;
+    padding: 0; }
+    .player-details > ul li {
+      font-size: 13px;
+      padding: 3px 0; }
+      .player-details > ul li:last-child {
+        font-weight: bold; }
+  .player-details .score {
+    position: absolute;
+    z-index: 0;
+    color: #333;
+    right: 10px;
+    font-size: 144px;
+    top: 45px; }
+    .player-details .score span {
+      font-size: 11px;
+      position: absolute;
+      font-weight: bold;
+      top: 10px; }
+
+.player-profile-pic {
+  float: left;
+  margin: 20px;
+  height: 120px;
+  overflow: hidden;
+  border: 1px solid;
+  position: relative;
+  width: 118px; }
+  .player-profile-pic img {
+    border: 2px solid white;
+    position: absolute;
+    left: -5px;
+    top: -8px; }
+
+/*# sourceMappingURL=players.component.css.map */
